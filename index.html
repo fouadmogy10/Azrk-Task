@@ -4,12 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailwind Native Project</title>
-    <!-- داخل <head> في ملف index.html -->
+
+    <!-- Meta Description -->
+    <meta
+      name="description"
+      content="مرحبًا بكم في جليمر، وجهتكم لعالم المجوهرات الفاخرة بتصاميم أنيقة وجودة عالية. اكتشفوا تشكيلتنا الواسعة من الخواتم، القلائد، الأساور والمزيد."
+    />
+
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
+    <!-- Font Awesome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -17,6 +25,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
     <!-- Swiper CSS -->
     <link
       rel="stylesheet"
@@ -26,12 +35,15 @@
       href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
       rel="stylesheet"
     />
+
     <!-- Tailwind via CDN -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="assets/styles/style.min.css" />
   </head>
+
   <body class="" dir="rtl">
     <!-- 🔶 Subnav -->
     <div
@@ -47,15 +59,19 @@
         </div>
         <!-- شمال -->
         <div class="gap-4 text-black flex">
-          <a href="#" class="flex gap-2 items-center"
-            ><img src="assets/Icons/ks.svg" alt="" /> العربية - ر.س</a
+          <a href="#" 
+          href="#" aria-label="Glimmer" class="flex gap-2 items-center"
+            ><img src="assets/Icons/ks.svg" alt="Glimmer" /> العربية - ر.س</a
           >
           <span>|</span>
-          <a href="#">المفضلة</a>
+          <a href="#" 
+          href="#" aria-label="Glimmer">المفضلة</a>
           <span>|</span>
-          <a href="#">سياسة الاستبدال</a>
+          <a href="#" 
+          href="#" aria-label="Glimmer">سياسة الاستبدال</a>
           <span>|</span>
-          <a href="#">تواصل معنا</a>
+          <a href="#" 
+          href="#" aria-label="Glimmer">تواصل معنا</a>
         </div>
       </div>
     </div>
@@ -116,13 +132,16 @@
 
           <div class="hidden md:flex gap-6 items-center text-base">
             <a
-              href="#"
+              href="#" 
+              href="#" aria-label="Glimmer"
               class="text-[#1E3231] relative after:absolute after:-bottom-1 after:left-0 after:h-[2px] after:w-[36px] after:bg-[#C98A40]"
             >
               الرئيسية
             </a>
-            <a href="#" class="text-muted">المدونة</a>
-            <a href="#" class="text-muted">تخفيضات</a>
+            <a href="#" 
+            href="#" aria-label="Glimmer" class="text-muted">المدونة</a>
+            <a href="#" 
+            href="#" aria-label="Glimmer" class="text-muted">تخفيضات</a>
           </div>
         </nav>
         <!-- شعار -->
@@ -139,17 +158,17 @@
           <div
             class="w-[40px] h-[40px] rounded-full bg-[#CE94611F] flex items-center justify-center"
           >
-            <img src="assets/Icons/search-normal.svg" alt="" />
+            <img src="assets/Icons/search-normal.svg" alt="ICON" />
           </div>
           <div
             class="w-[40px] h-[40px] rounded-full bg-[#CE94611F] hidden md:flex items-center justify-center"
           >
-            <img src="assets/Icons/user.svg" alt="" />
+            <img src="assets/Icons/user.svg" alt="ICON" />
           </div>
           <div
             class="w-[40px] h-[40px] rounded-full bg-[#CE94611F] hidden md:flex items-center justify-center"
           >
-            <img src="assets/Icons/heart.svg" alt="" />
+            <img src="assets/Icons/heart.svg" alt="Glimmer" />
           </div>
           <div
             class="relative w-[40px] h-[40px] rounded-full bg-[#CE9461] flex items-center justify-center"
@@ -177,13 +196,17 @@
       <section class="bg-[#1E3231] text-white py-12 relative overflow-hidden">
         <img
           src="assets/img/hero/flower.svg"
-          alt="زخرفة"
+          alt="زخرفة نباتية يمين الشاشة"
           class="absolute z-0 w-[225px] h-[276px] top-[3%] right-0 md:w-[25%] md:max-w-[225px] md:top-[30%] md:left-[85%]"
+          role="presentation"
+          aria-hidden="true"
         />
         <img
           src="assets/img/hero/flower.png"
-          alt="زخرفة ثانية"
+          alt="زخرفة نباتية يسار الشاشة"
           class="absolute z-0 w-[175px] h-[220px] opacity-40 top-[67%] -left-[118px] md:w-[28%] md:max-w-[288px] md:top-[50%] md:-left-[10%]"
+          role="presentation"
+          aria-hidden="true"
         />
 
         <div
@@ -191,47 +214,46 @@
         >
           <!-- صورة المجوهرات -->
           <div class="relative z-10 w-fit mx-auto">
-            <!-- الزخرفة -->
-
-            <!-- البوردر الخارجي (بدون اليسار) -->
+            <!-- الإطار الزخرفي -->
             <div
               class="absolute -top-3 -right-3 w-[287px] h-[314.67px] md:w-[377px] md:h-[516px] rounded-t-full z-0 border-t-[.5px] border-r-[.5px] border-b-[.5px] border-[#FBF9F6]"
+              aria-hidden="true"
             ></div>
 
             <!-- الصورة الأصلية -->
             <div
               class="w-[299px] h-[327.5px] md:w-[397px] md:h-[511px] mx-auto relative rounded-t-full z-10"
             >
-              <!-- صورة الخلفية -->
               <img
                 src="assets/img/hero/1.png"
-                alt="مجوهرات"
+                alt="عرض خاتم ذهبي فاخر في خلفية أنيقة"
                 class="rounded-t-[50%] w-full h-full object-cover"
               />
 
-              <!-- صورة الـ Vector -->
+              <!-- صورة الـ Vector المتحركة -->
               <img
                 src="assets/img/hero/Vector.svg"
-                alt="زخرفة"
+                alt="زخرفة ذهبية متحركة أعلى الصورة"
                 class="absolute top-2 right-14 transform -translate-x-1/2 animate-scalePulse z-20"
               />
             </div>
           </div>
-          <!-- النصوص -->
 
+          <!-- النصوص -->
           <div
             class="space-y-6 relative z-10 w-full text-right"
             data-aos="fade-left"
             data-aos-duration="1000"
           >
             <div class="flex justify-between items-center">
-              <h4
+              <h2
                 class="text-[#C98A40] font-normal text-3xl mt-4 md:mt-0"
                 data-aos="fade-up"
                 data-aos-delay="100"
               >
                 تألقي بأناقة لا تُنسى
-              </h4>
+              </h2>
+
               <div
                 class="hidden animate-pulse md:block z-0"
                 data-aos="zoom-in"
@@ -239,11 +261,14 @@
               >
                 <img
                   src="assets/img/hero/2.svg"
-                  alt="زخرفة 1"
+                  alt="زخرفة فنية أعلى العنوان"
                   class="w-24 rounded-xl"
+                  role="presentation"
+                  aria-hidden="true"
                 />
               </div>
             </div>
+
             <h1
               class="text-2xl sm:text-3xl lg:text-5xl font-bold leading-[52px] md:leading-[72px] z-10 lg:w-[85%]"
               data-aos="fade-up"
@@ -268,7 +293,9 @@
               حياتك.
             </p>
 
+            <!-- زر اكتشف المزيد -->
             <button
+              aria-label="اكتشف المزيد عن مجموعات المجوهرات"
               class="group border border-[#FFF5E0] text-[#FFF5E0] font-medium px-6 py-2 rounded-full flex flex-row-reverse items-center gap-3 transition duration-300 hover:bg-[#FFF5E0] hover:text-[#0C2B28]"
               data-aos="fade-up"
               data-aos-delay="400"
@@ -279,7 +306,7 @@
                 <img
                   src="assets/Icons/arrow.svg"
                   class="w-[10px] h-[10px] transition duration-300 group-hover:invert"
-                  alt="سهم"
+                  alt="سهم يشير إلى المزيد"
                 />
               </div>
               اكتشف المزيد
@@ -287,11 +314,15 @@
 
             <!-- نقاط التنقل -->
             <div data-aos="fade-up" data-aos-delay="500">
-              <img src="assets/Icons/pag.svg" alt="" />
+              <img
+                src="assets/Icons/pag.svg"
+                alt="نقاط التنقل بين السلايدات"
+                role="presentation"
+                aria-hidden="true"
+              />
             </div>
 
             <!-- زخارف -->
-
             <div
               class="absolute hidden bottom-0 left-0 translate-x-[-30%] translate-y-[30%] animate-pulse md:block"
               data-aos="zoom-in"
@@ -299,7 +330,7 @@
             >
               <img
                 src="assets/img/hero/3.svg"
-                alt="زخرفة 2"
+                alt="زخرفة ذهبية في الأسفل"
                 class="w-28 rounded-xl"
               />
             </div>
@@ -312,12 +343,12 @@
             >
               <img
                 src="assets/img/hero/2.svg"
-                alt="زخرفة 1"
+                alt="زخرفة ذهبية جانبية"
                 class="w-20 rounded-xl animate-pulse"
               />
               <img
                 src="assets/img/hero/3.svg"
-                alt="زخرفة 2"
+                alt="زخرفة ذهبية سفلية"
                 class="w-20 rounded-xl animate-pulse"
               />
             </div>
@@ -577,145 +608,200 @@
       </section>
 
       <!-- produvts -->
-      <section class="py-16 bg-secondary text-[#252525]">
+      <section
+        class="py-16 bg-secondary text-[#252525]"
+        aria-label="قسم أحدث المنتجات"
+      >
         <div class="md:container-75 container mx-auto px-4">
           <!-- العنوان -->
           <div
             class="mb-8 flex items-center justify-center gap-4"
             data-aos="fade-up"
           >
-            <div class="hidden sm:block flex-grow h-px bg-gray-300"></div>
+            <div
+              class="hidden sm:block flex-grow h-px bg-gray-300"
+              aria-hidden="true"
+            ></div>
             <h2 class="text-[32px] sm:text-4xl font-bold whitespace-nowrap">
               أحدث المنتجات
             </h2>
-            <div class="hidden sm:block flex-grow h-px bg-gray-300"></div>
+            <div
+              class="hidden sm:block flex-grow h-px bg-gray-300"
+              aria-hidden="true"
+            ></div>
           </div>
 
           <!-- شبكة المنتجات -->
-          <div id="productsGrid" class="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <!-- product card here -->
+          <div
+            id="productsGrid"
+            class="grid grid-cols-2 lg:grid-cols-4 gap-6"
+            aria-label="شبكة عرض المنتجات الحديثة"
+          >
+           
           </div>
 
-          <!-- الوصف -->
+          <!-- وصف القسم -->
           <div class="description pt-5 text-center">
-            <p class="text-5xl leading-[78px]" data-aos="fade-up-left">
-              يعد جليمر وجهتك المثالية للفخامة والجمال
+            <p
+              class="text-2xl sm:text-5xl leading-[50px] sm:leading-[78px]"
+              data-aos="fade-up-left"
+            >
+              <span
+                >يُعد <strong>جليمر</strong> وجهتك المثالية للفخامة والجمال، حيث
+                نقدم مجموعة متنوعة من القطع الراقية</span
+              >
               <img
-                class="inline-block w-[98px] h-[51px]"
+                class="inline-block w-[98px] h-[51px] mx-1 align-middle"
                 src="assets/img/Products/par(1).png"
-                alt=""
+                alt="زخرفة ذهبية - جزء 1"
               />
-              نقدم مجموعة متنوعة من القطع الراقية
+              <span>التي تجمع بين التصميم العصري والتقليدي</span>
               <img
-                class="inline-block w-[98px] h-[51px]"
+                class="inline-block w-[98px] h-[51px] mx-1 align-middle"
                 src="assets/img/Products/par(2).png"
-                alt=""
+                alt="زخرفة ذهبية - جزء 2"
               />
-              التي تجمع بين التصميم العصري والتقليدي
+              <span>لتُبرز كل قطعة الأناقة وتُعبر عن ذوقك الفريد</span>
               <img
-                class="inline-block w-[98px] h-[51px]"
+                class="inline-block w-[98px] h-[51px] mx-1 align-middle"
                 src="assets/img/Products/par(3).png"
-                alt=""
+                alt="زخرفة ذهبية - جزء 3"
               />
-              كل قطعة تُبرز الأناقة وتعكس ذوقك الفريد،
+              <span>مما يجعلها مثالية لكل مناسبة.</span>
               <img
-                class="inline-block w-[98px] h-[51px]"
+                class="inline-block w-[98px] h-[51px] mx-1 align-middle"
                 src="assets/img/Products/par(4).png"
-                alt=""
+                alt="زخرفة ذهبية - جزء 4"
               />
-              مما يجعلها مثالية لكل مناسبة.
             </p>
           </div>
         </div>
       </section>
 
       <!-- Categories -->
-      <section class="bg-[#153530] py-16 relative overflow-hidden">
+      <section
+        class="bg-[#153530] py-16 relative overflow-hidden"
+        aria-label="قسم تصنيفات المجوهرات"
+      >
         <!-- زخرفة بالخلفية إن أردت -->
         <img
           src="assets/img/CatSlider-ec/flower(1).svg"
-          alt="Decoration"
+          alt="زخرفة نباتية يمين"
           class="absolute w-[170.64px] h-[330.65px] md:min-w-[295.19px] md:min-h-[572px] rotate-[1408deg] top-[-29px] -right-[58px] z-0 md:top-[58px] md:left-[1445px]"
+          role="presentation"
+          aria-hidden="true"
         />
         <img
           src="assets/img/CatSlider-ec/flower(2).svg"
-          alt="Decoration"
+          alt="زخرفة نباتية يسار"
           class="absolute w-[174px] h-[179.05px] md:min-w-[468.41px] md:min-h-[482px] opacity-[10%] -bottom-[10px] left-[12px] z-0 md:bottom-[-75px] md:left-[75px]"
+          role="presentation"
+          aria-hidden="true"
         />
+
         <div class="mx-auto px-4 relative z-10">
           <!-- الهيدر -->
-          <div class="text-center mb-10" data-aos="zoom-in" data-aos-delay="0">
+          <header
+            class="text-center mb-10"
+            data-aos="zoom-in"
+            data-aos-delay="0"
+          >
             <p class="text-xl md:text-3xl text-gray-300 mb-2">
               لكل مناسبة، لدينا المجوهرات التي تجعلها لا تُنسى
             </p>
             <h2 class="text-3xlxl md:text-5xl text-white font-bold">
               تســــــــــــوقي أحدث الأقســـام
             </h2>
-          </div>
+          </header>
 
           <!-- السلايدر -->
           <div
             class="swiper categories-swiper"
             data-aos="zoom-in"
             data-aos-delay="100"
+            aria-label="سلايدر أقسام المجوهرات"
           >
             <div class="swiper-wrapper" id="categories-wrapper">
               <!-- الشرائح هتتولد هنا تلقائياً -->
             </div>
           </div>
 
-          <div class="mt-[5rem] flex justify-center items-center gap-4">
+          <!-- أزرار التنقل -->
+          <nav
+            class="mt-[5rem] flex justify-center items-center gap-4"
+            role="navigation"
+            aria-label="تحكم السلايدر"
+          >
             <!-- زر السابق -->
             <button
               class="categories-prev rounded-full w-[40px] h-[40px] shadow flex items-center justify-center transition"
+              aria-label="السابق"
             >
-              <img src="/assets/img/CatSlider-ec/right.svg" alt="السابق" />
+              <img
+                src="/assets/img/CatSlider-ec/right.svg"
+                alt="Glimmer"
+                role="presentation"
+                aria-hidden="true"
+              />
             </button>
 
             <!-- زر التالي -->
             <button
               class="categories-next rounded-full shadow flex items-center justify-center transition"
+              aria-label="التالي"
             >
-              <img src="/assets/img/CatSlider-ec/left.svg" alt="التالي" />
+              <img
+                src="/assets/img/CatSlider-ec/left.svg"
+                alt="Glimmer"
+                role="presentation"
+                aria-hidden="true"
+              />
             </button>
-          </div>
+          </nav>
         </div>
       </section>
 
       <!-- testmonial -->
-      <section class="py-20 bg-[#fbf9f6]">
+      <section class="py-20 bg-[#fbf9f6]" aria-labelledby="testimonials-title">
         <div class="container md:container-75 mx-auto px-4">
           <div
             class="flex flex-col lg:flex-row items-center justify-center gap-10"
           >
             <!-- صورة المنتج -->
-            <div class="w-full lg:w-1/2 max-w-[500px] mx-auto lg:mx-0">
+            <figure class="w-full lg:w-1/2 max-w-[500px] mx-auto lg:mx-0">
               <img
                 src="assets/img/testimonial/Rectangle 59.svg"
-                alt="تجربة العميل"
+                alt="صورة عميل يعبر عن تجربته"
                 class="w-full h-auto object-cover rounded-lg"
                 data-aos="fade-left"
               />
-            </div>
+              <figcaption class="sr-only">أحد عملائنا يشارك تجربته</figcaption>
+            </figure>
 
             <!-- محتوى التستيمونيال + السلايدر -->
             <div class="w-full max-w-[734px]">
               <!-- العنوان -->
-              <div class="text-right mb-10 px-4 md:px-0" data-aos="fade-left">
+              <header
+                class="text-right mb-10 px-4 md:px-0"
+                data-aos="fade-left"
+              >
                 <p class="text-[#252525] text-xl md:text-2xl mb-2">
                   تجارب عملائنا المميزة
                 </p>
                 <h2
+                  id="testimonials-title"
                   class="text-3xl md:text-4xl text-[#252525] font-semibold leading-snug"
                 >
                   آراء حقيقيـــة تشـــهد على تــــميز خــدمــــتنا
                 </h2>
-              </div>
+              </header>
 
               <!-- سلايدر -->
               <div
                 class="swiper testimonials-swiper lg:-mr-16"
                 data-aos="fade-right"
+                role="region"
+                aria-label="شهادات وتجارب العملاء"
               >
                 <div class="swiper-wrapper" id="testimonials-wrapper">
                   <!-- Testimonial Slide -->
@@ -726,15 +812,22 @@
                   class="flex items-center justify-center gap-4 mt-6 font-semibold text-[#252525] text-xl md:text-2xl"
                 >
                   <!-- Current Slide -->
-                  <div id="current-slide">01</div>
+                  <div id="current-slide" aria-label="الشريحة الحالية">01</div>
 
                   <!-- Pagination Dots -->
-                  <div class="flex items-center gap-2" id="custom-pagination">
+                  <div
+                    class="flex items-center gap-2"
+                    id="custom-pagination"
+                    role="tablist"
+                    aria-label="مؤشرات التصفح بين الشهادات"
+                  >
                     <!-- Dots will be added dynamically -->
                   </div>
 
                   <!-- Total Slides -->
-                  <div id="total-slides">03</div>
+                  <div id="total-slides" aria-label="إجمالي عدد الشرائح">
+                    03
+                  </div>
                 </div>
               </div>
             </div>
@@ -743,15 +836,18 @@
       </section>
 
       <!--Articles-->
-      <section dir="rtl" class="bg-[#FDFBF7] py-16">
+      <section dir="rtl" class="bg-[#FDFBF7] py-16" aria-label="قسم المقالات">
         <div class="w-[90%] mr-auto px-4">
           <div class="md:flex justify-center gap-8">
             <!-- ⬅️ الهيدر – ثُلث -->
-            <div
+            <header
               data-aos="fade-left"
               class="w-full md:w-1/3 text-right flex flex-col justify-center"
             >
-              <h4 class="text-2xl leading-6 text-[#252525] mb-2 text-right">
+              <h4
+                class="text-2xl leading-6 text-[#252525] mb-2"
+                aria-label="عنوان فرعي"
+              >
                 أحدث المقالات
               </h4>
               <h2
@@ -759,12 +855,18 @@
               >
                 اكتشــــف أحــــدث الصيحـــــــات.
               </h2>
-            </div>
+            </header>
 
             <!-- ⬅️ السلايدر – ثلثان -->
             <div class="w-full md:w-2/3">
-              <div class="swiper articlesSwiper">
-                <div class="swiper-wrapper"></div>
+              <div
+                class="swiper articlesSwiper"
+                aria-label="سلايدر المقالات"
+                role="region"
+              >
+                <div class="swiper-wrapper">
+                  <!-- الشرائح ستُضاف ديناميكيًا -->
+                </div>
               </div>
             </div>
           </div>
@@ -774,9 +876,13 @@
       <!-- brand -->
       <section
         class="brand min-h-[150px] bg-primary py-8 flex items-center justify-center"
+        role="region"
+        aria-label="شركاؤنا التجاريون"
       >
-        <div class="swiper brandSwiper">
-          <div class="swiper-wrapper" id="brand-wrapper"></div>
+        <div class="swiper brandSwiper" aria-hidden="false">
+          <div class="swiper-wrapper" id="brand-wrapper" role="list">
+            <!-- العناصر ستُضاف ديناميكيًا داخل swiper-slide -->
+          </div>
         </div>
       </section>
 
@@ -809,6 +915,7 @@
                 <!-- كل سؤال -->
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
+                  aria-label="الاسئلة الشائعة"
                     onclick="toggleFAQ(this)"
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
@@ -839,6 +946,7 @@
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
                     onclick="toggleFAQ(this)"
+                    aria-label="الأسئلة الشائعة" 
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
                     <span
@@ -866,6 +974,7 @@
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
                     onclick="toggleFAQ(this)"
+                    aria-label="الأسئلة الشائعة" 
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
                     <span
@@ -893,6 +1002,7 @@
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
                     onclick="toggleFAQ(this)"
+                    aria-label="الأسئلة الشائعة" 
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
                     <span
@@ -920,6 +1030,7 @@
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
                     onclick="toggleFAQ(this)"
+                    aria-label="الأسئلة الشائعة" 
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
                     <span
@@ -947,6 +1058,7 @@
                 <li class="faq-item border-t border-[#E6E2DD] pt-4">
                   <button
                     onclick="toggleFAQ(this)"
+                    aria-label="الأسئلة الشائعة" 
                     class="flex items-center justify-between w-full text-right transition-all duration-300"
                   >
                     <span
@@ -995,7 +1107,8 @@
                   <div
                     class="w-[63px] h-[63px] rounded-full bg-[#FFF5E099] backdrop-blur-sm flex items-center justify-center"
                   >
-                    <img
+                    <img 
+                    alt="Glimmer"
                       src="assets/img/FAQ/ICON/jewelery.svg"
                       class="w-[27.68px] h-[33.94px]"
                     />
@@ -1017,6 +1130,7 @@
                     class="w-[63px] h-[63px] rounded-full bg-[#FFF5E099] backdrop-blur-sm flex items-center justify-center"
                   >
                     <img
+                    alt="Glimmer"
                       src="assets/img/FAQ/ICON/wallet.svg"
                       class="w-[27.68px] h-[33.94px]"
                     />
@@ -1038,6 +1152,7 @@
                     class="w-[63px] h-[63px] rounded-full bg-[#FFF5E099] backdrop-blur-sm flex items-center justify-center"
                   >
                     <img
+                    alt="Glimmer"
                       src="assets/img/FAQ/ICON/delivery-truck.svg"
                       class="w-[27.68px] h-[33.94px]"
                     />
@@ -1058,7 +1173,8 @@
                   <div
                     class="w-[63px] h-[63px] rounded-full bg-[#FFF5E099] backdrop-blur-sm flex items-center justify-center"
                   >
-                    <img
+                    <img 
+                    alt="Glimmer"
                       src="assets/img/FAQ/ICON/customer-support 1.svg"
                       class="w-[27.68px] h-[33.94px]"
                     />
@@ -1118,47 +1234,56 @@
             <h3 class="text-2xl font-bold">حسابى</h3>
             <ul class="space-y-2 text-xl">
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >حسابى</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >طلباتى</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >سلة المشتريات</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >سلة المشتريات</a
                 >
               </li>
             </ul>
           </div>
+
           <div class="space-y-4">
             <h3 class="text-2xl font-bold">روابط مهمة</h3>
             <ul class="space-y-2 text-xl">
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >من نحن</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >ساسية الخصوصية</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >الشروط والاحكام</a
                 >
               </li>
               <li>
-                <a href="#" class="text-white hover:text-[#CE9461] transition"
+                <a href="#" 
+                href="#" aria-label="Glimmer" class="text-white hover:text-[#CE9461] transition"
                   >الدعم الفنى</a
                 >
               </li>
@@ -1173,7 +1298,7 @@
                 <img
                   src="assets/img/footer/icon/mobile.svg"
                   class="w-[16px] h-[16px]"
-                  alt=""
+                  alt="Glimmer"
                 />
                 <a href="tel:+11234567890">009612345678932</a>
               </p>
@@ -1181,7 +1306,7 @@
                 <img
                   src="assets/img/footer/icon/call.svg"
                   class="w-[16px] h-[16px]"
-                  alt=""
+                  alt="Glimmer"
                 />
                 <a href="tel:+11234567890">009612345678932</a>
               </p>
@@ -1189,19 +1314,18 @@
                 <img
                   src="assets/img/footer/icon/Vector.svg"
                   class="w-[16px] h-[16px]"
-                  alt=""
+                  alt="Glimmer"
                 />
                 <a href="mailto:https://salla.sa">https://salla.sa</a>
               </p>
             </address>
             <div class="flex gap-4">
-              <!-- أيقونة Facebook -->
               <!-- Facebook -->
               <a
-                href="#"
+                href="#" 
+                href="#" aria-label="Glimmer"
                 class="bg-white text-[#1F1F1F] rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#1877F2] hover:text-white transition"
               >
-                <!-- أيقونة Facebook -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -1216,10 +1340,10 @@
 
               <!-- Twitter -->
               <a
-                href="#"
+                href="#" 
+                href="#" aria-label="Glimmer"
                 class="bg-white text-[#1F1F1F] rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#1DA1F2] hover:text-white transition"
               >
-                <!-- أيقونة Twitter -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -1234,10 +1358,10 @@
 
               <!-- Instagram -->
               <a
-                href="#"
+                href="#" 
+                href="#" aria-label="Glimmer"
                 class="bg-white text-[#1F1F1F] rounded-full w-10 h-10 flex items-center justify-center hover:bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 hover:text-white transition"
               >
-                <!-- أيقونة Instagram -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -1252,10 +1376,10 @@
 
               <!-- WhatsApp -->
               <a
-                href="#"
+                href="#" 
+                href="#" aria-label="Glimmer"
                 class="bg-white text-[#1F1F1F] rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#25D366] hover:text-white transition"
               >
-                <!-- أيقونة WhatsApp -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -1270,10 +1394,10 @@
 
               <!-- Snapchat -->
               <a
-                href="#"
+                href="#" 
+                href="#" aria-label="Glimmer"
                 class="bg-white text-[#1F1F1F] rounded-full w-10 h-10 flex items-center justify-center hover:bg-[#FFFC00] hover:text-black transition"
               >
-                <!-- أيقونة Snapchat -->
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="currentColor"
@@ -1288,10 +1412,10 @@
             </div>
           </div>
         </div>
+
         <div
           class="mt-10 bg-[#F0E5D3] rounded-lg p-6 flex flex-col gap-6 md:flex-row md:justify-around md:items-center flex-wrap text-[#44332C]"
         >
-          <!-- النص -->
           <div class="text-center md:text-right">
             <p class="font-bold text-2xl mb-1">
               اشترك في النشرة البريدية ليصلك كل جديد!
@@ -1299,7 +1423,6 @@
             <p class="text-xl">كن أول من يعرف عن العروض والمنتجات الجديدة</p>
           </div>
 
-          <!-- النموذج -->
           <form
             class="flex flex-col sm:flex-row items-center gap-4 w-full md:w-auto"
           >
@@ -1316,6 +1439,7 @@
           </form>
         </div>
       </div>
+
       <!-- Payment Methods -->
       <div class="border-t border-gray-700 pt-4 mt-8">
         <div
@@ -1325,7 +1449,7 @@
             <img
               class="w-[22.5px] h-[30px]"
               src="assets/img/footer/icon/posta.svg"
-              alt=""
+              alt="Glimmer"
             />
             <span>546987552 : الرقم الضريبي</span>
           </div>
@@ -1357,6 +1481,7 @@
         </div>
       </div>
     </footer>
+
     <!-- Fancy Jewelry Loader -->
     <div
       id="loader"
@@ -1371,7 +1496,7 @@
       <h1
         class="text-[#ce9461] text-2xl md:text-3xl font-bold tracking-wider animate-pulse"
       >
-        <img src="assets/img/logo.png" alt="" />
+        <img src="assets/img/logo.png" alt="Glimmer" />
       </h1>
     </div>
 

@@ -62,13 +62,13 @@ fullData.forEach((cat) => {
     "swiper-slide min-w-[386px] min-h-[609px] rounded-[26px] overflow-hidden relative";
 
   slide.innerHTML = `
-      <img src="${cat.image}" class="w-full h-full object-cover" alt="" />
+      <img alt="Glimmer" src="${cat.image}" class="w-full h-full object-cover" alt="" />
       <div class="absolute text-center bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-white">
         <h3 class="text-xl font-bold">
           ${cat.title}
           <span class="text-sm font-normal">(${cat.count} قطعة)</span>
         </h3>
-        <button class="mt-2 text-sm underline hover:text-[#CE9461] transition">تسوق الآن</button>
+        <button class="mt-2 text-sm underline hover:text-[#CE9461] transition" aria-label="icon">تسوق الآن</button>
       </div>
     `;
 
@@ -83,9 +83,9 @@ menuData.forEach((item) => {
     li.innerHTML = `<a href="#" class="block hover:text-[#C98A40] border-b border-[#ffffff36] pb-1">${item.title}</a>`;
   } else {
     li.innerHTML = `<button class="flex justify-between items-center w-full hover:text-[#C98A40] border-b border-[#ffffff36] pb-1"
-               data-title="${item.title}">
+               data-title="${item.title}" aria-label="icon">
          ${item.title}
-         <img src="assets/Icons/down-arrow.svg">
+         <img alt="Glimmer" src="assets/Icons/down-arrow.svg">
        </button>`;
   }
 
@@ -363,7 +363,7 @@ allBrands.forEach((src) => {
     `
       <div class="swiper-slide flex justify-center items-center px-4">
         <div class="w-32 aspect-[4/1] flex items-center justify-center">
-          <img src="${src}" alt="brand logo" class="h-full w-auto object-contain" />
+          <img alt="Glimmer" src="${src}" alt="brand logo" class="h-full w-auto object-contain" />
         </div>
       </div>
       `
@@ -379,15 +379,15 @@ articles.forEach((article) => {
   slide.className =
     "swiper-slide max-w-sm bg-white rounded-xl overflow-hidden shadow-sm";
   slide.innerHTML = `
-      <img src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover" />
+      <img alt="Glimmer" src="${article.image}" alt="${article.title}" class="w-full h-48 object-cover" />
       <div class="p-4 space-y-2 text-right">
         <div class="text-base font-light text-[#CE9461] flex gap-2">
           <span class="flex gap-1 items-center">
-            <img src="assets/img/article/clender.svg" class="w-4" />
+            <img alt="Glimmer" src="assets/img/article/clender.svg" class="w-4" />
             ${article.date}
           </span>
           <span class="flex">
-            <img class="w-4" src="assets/img/article/user.svg" alt="admin" />
+            <img alt="Glimmer" class="w-4" src="assets/img/article/user.svg" alt="admin" />
             ${article.author}
           </span>
         </div>
@@ -409,16 +409,16 @@ testimonials.forEach((testimonial) => {
   slide.innerHTML = `
       <div class="bg-[#1E3231] text-white rounded-[20px] p-6 md:py-10 relative w-full min-h-[385px] overflow-hidden">
         <div class="text-[#CE9461] w-[47px] h-[47px] mb-4">
-          <img src="assets/img/testimonial/quote.svg" class="w-full" alt="quote" />
+          <img alt="Glimmer" src="assets/img/testimonial/quote.svg" class="w-full" alt="quote" />
         </div>
         <p class="text-lg md:text-2xl leading-relaxed mb-6 line-clamp-5">
           ${testimonial.text}
         </p>
         <div class="text-[#CE9461] flex justify-end">
-          <img src="assets/img/testimonial/quoteBottom.svg" class="w-[47px] h-[47px]" alt="quote" />
+          <img alt="Glimmer" src="assets/img/testimonial/quoteBottom.svg" class="w-[47px] h-[47px]" alt="quote" />
         </div>
         <div class="flex items-center gap-4">
-          <img src="${testimonial.avatar}" class="w-[62px] h-[62px] rounded-full" alt="${testimonial.name}" />
+          <img alt="Glimmer" src="${testimonial.avatar}" class="w-[62px] h-[62px] rounded-full" alt="${testimonial.name}" />
           <div>
             <h4 class="text-[#CE9461] text-xl md:text-3xl leading-8">${testimonial.name}</h4>
             <p class="text-sm md:text-lg text-[#FFF5E0]">${testimonial.role}</p>
@@ -440,23 +440,23 @@ products.forEach((product) => {
 
   card.innerHTML = `
       <div class="absolute top-3 left-3 z-10">
-        <button class="bg-white p-1 rounded-full shadow hover:bg-red-100 transition">
-          <img src="/assets/Icons/heart.svg" alt="Favorite" class="w-5 h-5" />
+        <button class="bg-white p-1 rounded-full shadow hover:bg-red-100 transition" aria-label="icon">
+          <img alt="Glimmer" src="/assets/Icons/heart.svg" alt="Favorite" class="w-5 h-5" />
         </button>
       </div>
 
       <div class="relative rounded-xl overflow-hidden h-[250px] sm:h-[300px]">
         <div class="p-2 h-full">
-          <img src="${product.imgMain}" alt="${product.title}"
+          <img alt="Glimmer" src="${product.imgMain}" alt="${product.title}"
                class="w-full h-full object-cover rounded-lg transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:scale-105">
         </div>
-        <img src="${product.imgHover}" alt="hover"
+        <img alt="Glimmer" src="${product.imgHover}" alt="hover"
              class="absolute inset-0 w-full h-full object-cover rounded-lg opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500 ease-in-out">
         <div
   class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2 opacity-0 translate-y-3 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-10">
   
   <!-- زر السلة -->
-  <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100 transition">
+  <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100 transition" aria-label="icon">
     <svg xmlns="http://www.w3.org/2000/svg"
          fill="none"
          viewBox="0 0 24 24"
@@ -469,7 +469,7 @@ products.forEach((product) => {
   </button>
 
   <!-- زر العرض -->
-  <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100 transition">
+  <button class="bg-white p-2 rounded-full shadow hover:bg-gray-100 transition" aria-label="icon">
     <svg xmlns="http://www.w3.org/2000/svg"
          fill="none"
          viewBox="0 0 24 24"
@@ -490,7 +490,7 @@ products.forEach((product) => {
         <div class="flex items-center justify-between text-sm mt-2">
           <span class="text-lg font-medium text-[#CE9461]">${product.category}</span>
           <div class="flex space-x-1 rtl:space-x-reverse">
-            <img src="/assets/img/slider/Group 1618873373.svg" alt="نجوم">
+            <img alt="Glimmer" src="/assets/img/slider/Group 1618873373.svg" alt="نجوم">
           </div>
         </div>
         <h3 class="md:text-2xl text-base font-medium mt-1 truncate">${product.title}</h3>
