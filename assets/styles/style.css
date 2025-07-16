@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Harmattan:wght@400;700&display=swap");
+
+@layer utilities {
+  .container-75 {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ألوان أساسية */
+  .bg-primary {
+    background-color: #1e3231;
+  }
+  .bg-secondary {
+    background-color: #fbf9f6;
+  }
+  .bg-third {
+    background-color: #f0e5d3;
+  }
+  .bg-sub-nav {
+    background-color: #ce9461;
+  }
+
+  .text-primary {
+    color: #1e3231;
+  }
+  .text-secondary {
+    color: #4b5563;
+  }
+  .text-muted {
+    color: #000000b2;
+  }
+
+  .border-primary {
+    border-color: #0057ff;
+  }
+  .border-muted {
+    border-color: #e5e7eb;
+  }
+
+  /* ألوان التنبيهات */
+  .bg-success {
+    background-color: #10b981;
+  }
+  .bg-error {
+    background-color: #ef4444;
+  }
+  .bg-warning {
+    background-color: #f59e0b;
+  }
+  .icon-circle {
+    @apply w-10 h-10 rounded-full bg-[#CE94611F] flex items-center justify-center;
+  }
+}
+
+body {
+  font-family: "Harmattan", sans-serif;
+}
+
+.swiper.categories-swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.categories-swiper .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.categories-swiper .swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+.categories-swiper {
+  /* padding-bottom: 50px; مساحة لتحت */
+  overflow: visible; /* مهم عشان يسمح للعناصر بالخروج */
+}
+
+.categories-swiper .swiper-slide {
+  transition: transform 0.5s ease !important;
+}
+
+.categories-swiper .swiper-slide-active {
+  transform: translateY(80px) scale(1.1) !important;
+  z-index: 10;
+}
+.brandSwiper .swiper-slide {
+  width: auto !important;
+}
+.last-sec {
+  background-image: linear-gradient(to top, #ce9461bd, #ce9461bd),
+    url("assets/img/FAQ/FAQ(1).jpg") !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes scalePulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+}
+
+.animate-scalePulse {
+  animation: scalePulse 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
